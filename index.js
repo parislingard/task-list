@@ -10,11 +10,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //connect to the database
-mongoose.connect(process.env.DB, { useNewUrlParser: true })
+mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log(`Database connected successfully`))
   .catch(err => console.log(err));
 
-//since mongoose promise is depreciated, we overide it with node's promise
 mongoose.Promise = global.Promise;
 
 app.use((req, res, next) => {
@@ -24,7 +23,10 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({extended: true}));
+app.get('/', (req, res) => {
+  res.json({message: "Welcome to the REST API"});
+});
 app.use('/api', routes);
 
 app.use((err, req, res, next) => {
