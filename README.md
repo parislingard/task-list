@@ -1,5 +1,7 @@
-#  Task List
-To-do list app using the MERN stack
+#  Task List (MERN Stack)
+Web app that allows the user to add and remove tasks.
+
+<img src="https://user-images.githubusercontent.com/48728002/97100373-14b95700-1669-11eb-939f-8d7ea050f39c.png" width="300" height="300">
 
 # How to Deploy
 1. Clone or download the repo.
