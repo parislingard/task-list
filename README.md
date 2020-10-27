@@ -6,10 +6,4 @@ Web app that allows the user to add and remove tasks.
 # How to Deploy
 1. Clone or download the repo.
 2. Open the project folder in the terminal.
-3. Run the following commands in the terminal:
-
-    • npm install
-
-    • cd client
-
-    • yarn start
+3. Run "yarn start" in the terminal.
